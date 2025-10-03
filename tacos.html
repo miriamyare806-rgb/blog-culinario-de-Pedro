@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetas de Tacos Mexicanos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #227E41;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 25px;
+      margin: 10px;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.2em;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      background-color: #0D5E28;
+      border-radius: 8px;
+      display: block;
+    }
+
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .receta {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      color: #227E41;
+      font-family: cursive;
+      margin-top: 10px;
+    }
+
+    h4 {
+      margin-top: 15px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: #227E41;
+      color: white;
+      border-radius: 15px 15px 0 0;
+    }
+
+    @media (max-width: 1024px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+        background-color: #0D5E28;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+        padding: 15px 0;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      nav ul li a {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
+    }
+
+    /* ===== LAPTOP ===== */
+    @media (min-width: 1025px) {
+      nav ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tacos</h1>
+    <p>Preparación de Tacos</p>
+
+    <!-- Botón hamburguesa -->
+    <button class="hamburger" id="btnHamburguesa">☰</button>
+
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="receta">
+      <h2>Tacos al Pastor</h2>
+      <h4>Ingredientes</h4>
+      <ul>
+        <li>500 g de carne de cerdo adobada</li>
+        <li>1 piña en rodajas</li>
+        <li>1 cebolla picada</li>
+        <li>Cilantro fresco</li>
+        <li>Tortillas de maíz</li>
+        <li>Salsa al gusto</li>
+      </ul>
+      <h4>Preparación</h4>
+      <ol>
+        <li>Cocina la carne adobada en un sartén caliente.</li>
+        <li>Agrega las rodajas de piña para que se doren.</li>
+        <li>Calienta las tortillas.</li>
+        <li>Sirve la carne sobre las tortillas y añade piña, cebolla, y cilantro.</li>
+        <li>Acompaña con tu salsa favorita.</li>
+      </ol>
+    </section>
+
+    <section class="receta">
+      <h2>Tacos de Carne Asada</h2>
+      <h4>Ingredientes</h4>
+      <ul>
+        <li>500 g de carne de res (arrachera o similar)</li>
+        <li>1 limón</li>
+        <li>Sal y pimienta al gusto</li>
+        <li>Cebolla y cilantro picados</li>
+        <li>Tortillas de maíz</li>
+        <li>Salsa verde</li>
+      </ul>
+      <h4>Preparación</h4>
+      <ol>
+        <li>Marina la carne con limón, sal y pimienta.</li>
+        <li>Asa la carne en una parrilla o sartén hasta que esté bien cocida.</li>
+        <li>Corta en trozos pequeños.</li>
+        <li>Sirve sobre tortillas y agrega cebolla, cilantro y salsa verde.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <p>2025 Mis Recetas</p>
+    <p>PEDRO RODRÍGUEZ JASSO</p>
+    <p>Email: pedrorodriguezjasso2712@gmail.com</p>
+    <br>
+    <p>Tel: 722222222</p>
+  </footer>
+
+
+  <script>
+    const btnHamb = document.getElementById("btnHamburguesa");
+    const menu = document.getElementById("menu");
+
+    btnHamb.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>

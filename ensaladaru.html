@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Receta de Ensalada Rusa Mexicana</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f7f4;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2em;
+    }
+
+    nav ul {
+      list-style: none;
+      margin-top: 15px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      background-color: #2e7031;
+      padding: 10px 16px;
+      border-radius: 8px;
+      display: block;
+    }
+
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: #4caf50;
+      font-family: cursive;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    ul li, ol li {
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: dato 4caf50;
+      color: white;
+      border-radius: 15px 15px 0 0;
+    }
+    @media (max-width: 1439px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+        background-color: #3e8e41;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+        padding: 15px 0;
+        animation: slideDown 0.3s ease-in-out;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      nav ul li a {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      header h1 {
+        font-size: 1.6em;
+      }
+
+      section {
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+
+
+    @media (min-width: 1440px) {
+      nav ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        gap: 15px;
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
+
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Receta</h1>
+    <br>
+    <h1>Ensalada Rusa</h2>
+    <p>Un clásico de las fiestas, fresco y delicioso</p>
+
+    <button class="hamburger" id="btnHamburguesa">☰</button>
+
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>3 papas medianas, peladas y en cuadritos</li>
+      <li>2 zanahorias medianas, peladas y en cuadritos</li>
+      <li>1/4 de taza de chícharos</li>
+      <li>1/2 taza de granos de elote</li>
+      <li>1 taza de mayonesa</li>
+      <li>1/4 taza de crema (opcional, para una textura más suave)</li>
+    </ul>
+
+    <h2>Instrucciones</h2>
+    <ol>
+      <li>En una olla con agua, hierve las papas y las zanahorias hasta que estén suaves pero firmes (aprox. 10-12 minutos). Escúrrelas y deja enfriar.</li>
+      <li>Hierve los chícharos y el elote por separado durante unos 5-7 minutos o hasta que estén cocidos. Escurre y deja enfriar.</li>
+      <li>En un tazón grande, mezcla las papas, zanahorias, chícharos y elote.</li>
+      <li>Agrega la mayonesa (y la crema si deseas) y mezcla suavemente hasta integrar.</li>
+      <li>Refrigera al menos 30 minutos antes de servir para que tome mejor sabor.</li>
+    </ol>
+
+    <h2>Consejos</h2>
+    <p>Disfuta de este alimento ya que es bastante nutritivo y saludable, y conlleva un sabor increíble que lo puedes combinar con galletas bro.</p>
+  </section>
+
+    <footer id="contacto">
+    <p>2025 Mis Recetas</p>
+    <br>
+    <p>PEDRO RODRÍGUEZ JASSO</p>
+    <p>Email: pedrorodriguezjasso2712@gmail.com</p>
+    <br>
+    <p>Tel: 722222222</p>
+  </footer>
+
+
+  <script>
+    const btnHamb = document.getElementById("btnHamburguesa");
+    const menu = document.getElementById("menu");
+
+    btnHamb.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>

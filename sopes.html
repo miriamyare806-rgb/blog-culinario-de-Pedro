@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Receta de Sopes Mexicanos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #885F19;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 20px;
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2em;
+    }
+
+    nav ul {
+      list-style: none;
+      margin-top: 15px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      background-color: #6e4d14;
+      border-radius: 8px;
+      display: block;
+    }
+
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: #885F19;
+      font-family: cursive;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    ol {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: #885F19;
+      color: white;
+      border-radius: 15px 15px 0 0;
+    }
+
+    @media (max-width: 1024px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+        background-color: #6e4d14;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+        padding: 15px 0;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      nav ul li a {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      section {
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      nav ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        gap: 15px;
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Receta</h1> <h1> Tradicional de Sopes Mexicanos</h1>
+    <p>¡Un antojito delicioso y muy mexicano!</p>
+
+
+    <button class="hamburger" id="btnHamburguesa">☰</button>
+
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>Masa de maíz</li>
+      <li>1/4 de taza de agua tibia</li>
+      <li>Frijoles refritos</li>
+      <li>Lechuga o repollo finamente picado</li>
+      <li>Crema al gusto</li>
+      <li>Queso fresco desmoronado</li>
+      <li>Salsa (verde o roja)</li>
+      <li>Aceite para freír</li>
+    </ul>
+
+    <h2>Instrucciones</h2>
+    <ol>
+      <li>En un tazón, mezcla la masa con agua hasta obtener una consistencia suave.</li>
+      <li>Forma pequeñas bolas y aplánalas para hacer ruedas gruesas de masa.</li>
+      <li>Cocina las ruedas de masa en un comal caliente por ambos lados hasta que estén cocidas.</li>
+      <li>Con los dedos, pellizca las orillas para formar el borde del sope.</li>
+      <li>Agrega aceite en la parte superior del sope, donde se formaron los huecos, para lograr un toque crujiente.</li>
+      <li>Unta una capa de frijoles refritos sobre cada sope.</li>
+      <li>Agrega la carne (como pollo), lechuga, crema, queso y salsa al gusto.</li>
+    </ol>
+
+    <h2>Consejos</h2>
+    <p>Puedes hacer los sopes más saludables cocinándolos solo en el comal sin freír. También puedes variar los ingredientes según tus gustos.</p>
+  </section>
+
+  <footer id="contacto">
+    <p>2025 Mis Recetas</p>
+    <p>PEDRO RODRÍGUEZ JASSO</p>
+    <p>Email: pedrorodriguezjasso2712@gmail.com</p>
+    <br>
+    <p>Tel: 722222222</p>
+  </footer>
+
+
+  <script>
+    const btnHamb = document.getElementById("btnHamburguesa");
+    const menu = document.getElementById("menu");
+
+    btnHamb.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
